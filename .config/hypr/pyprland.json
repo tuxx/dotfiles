@@ -1,0 +1,35 @@
+{
+  "pyprland": {
+    "plugins": [
+      "scratchpads"
+    ]
+  },
+  "scratchpads": {
+    "term": {
+      "command": "kitty --class kitty-dropterm",
+      "animation": "fromTop",
+      "unfocus": "hide"
+    },
+    "tmuxterm": {
+      "command": "kitty --class kitty-tmuxdropterm tmux",
+      "animation": "",
+      "unfocus": "hide"
+    },
+    "irc": {
+      "command": "kitty --hold --class kitty-irc ssh irc",
+      "animation": "",
+      "unfocus": "hide"
+    },
+    "spotify": {
+      "command": "spotify-launcher",
+      "animation": "fromLeft",
+      "unfocus": "hide"
+    },
+    "volume": {
+      "command": "pavucontrol",
+      "unfocus": "hide",
+      "animation": "fromRight"
+    }
+  },
+    "unknown": "wlrlui"
+  }
