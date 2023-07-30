@@ -1,90 +1,237 @@
 * {
-  font-family: SpaceMono Nerd Font, feather;
-  font-weight: 900;
-  font-size: 14px;
-  color: #c0caf5;
+    border: none;
+    border-radius: 0px;
+    /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    min-height: 0;
 }
 
-/* Set background color of main waybar window */
 window#waybar {
-  background: rgba(21, 22, 30, 0.5);
+    background: transparent /*rgba(30, 30, 46, 0.5);*/
+    /*border-bottom: 1px solid #282828;*/
 }
 
-/* Set background color of tooltips */
-tooltip {
-  background: #1e1e2e;
+#workspaces {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;
+	margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  border: solid 0px #f4d9e1;
+  font-weight: normal;
+  font-style: normal;
 }
-
-/* Set workspace text color and padding */
 #workspaces button {
-  padding: 0;
+    padding: 0px 10px;
+    border-radius: 15px;
+    color: #7aa2f7;
 }
 
-/* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
-  border-bottom: 2px solid #7aa2f7;
-  border-radius: 0;
-  margin-bottom: 2px;
-}
-
-/* More workspace stuff for highlighting on hover */
-#workspaces button.focused {
-  color: #a6adc8;
-}
-
-#workspaces button.urgent {
-  color: #f7768e;
+    color: #f8f8f2;
+    background-color: transparent;
+    border-radius: 15px;
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
+	background-color: transparent;
+	color: black;
+	border-radius: 15px;
 }
 
-/* Sets background, padding, margins, and borders for (all) modules */
-#custom-kernel,
-#custom-pacman,
-#workspaces,
-#clock,
-#window,
-#temperature,
-#cpu,
-#memory,
-#pulseaudio,
-#tray,
-#mpd {
-  background: rgba(21, 22, 30, 0.7);
-  padding: 0 10px;
-  margin: 3px 0;
-  border: 0;
-}
-
-#window.empty {
-  background: rgba(0, 0, 0, 0);
-}
-
-/* Set up rounding to make these modules look like separate pills */
-#mpd {
+#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher, #custom-machines, #custom-archivos {
+	background: transparent;
+	padding: 5px 5px 5px 5px;
+	margin: 0px 5px 5px 5px;
   border-radius: 8px;
-  margin-left: 4px;
+  border: solid 0px #f4d9e1;
+}
+
+#custom-date {
+	color: #D3869B;
+}
+
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
 }
 
 #tray {
-  border-radius: 8px;
-  margin-right: 4px;
+    background: transparent;
+    margin: 5px 5px 5px 5px;
+    border-radius: 16px;
+    padding: 0px 5px;
+    /*border-right: solid 1px #282738;*/
+}
+
+#clock {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #11111D;
+    padding: 8px 8px 8px 8px;
+    border-radius: 0px 0px 16px 16px;
+
+    color: #FFFFFF;
+}
+#backlight {
+    background-color: #24283b;
+    color: #db4b4b;
+    border-radius: 0px 0px 0px 0px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 0px;
+}
+
+#network {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#pulseaudio {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#pulseaudio.muted {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    color: red;
+    margin-right: 9px;
+}
+
+#custom-launcher {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*border-right: solid 1px #282738;*/
+    font-size: 16px;
+}
+
+#custom-machines {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    /*border-right: solid 1px #282738;*/
+    font-size: 16px;
+}
+
+#custom-archivos {
+    background: #11111D; /* rgba(26,26,26,.9); */
+    padding: 0 1rem;
+    border-radius: 0.75rem;;
+    /*border-right: solid 1px #282738;*/
+    font-size: 16px;
+}
+
+#custom-launcher button:hover {
+    background-color: #FB4934;
+    color: transparent;
+    border-radius: 8px;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+#custom-playerctl {
+	background: transparent;
+	padding-left: 15px;
+  padding-right: 8px;
+	border-radius: 16px;
+  /*border-left: solid 1px #282738;*/
+  /*border-right: solid 1px #282738;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#custom-playerlabel {
+    background: transparent;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 12px;
+    color: #98971a
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
 }
 
 #window {
-  border-radius: 8px;
+    background: #282828;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 16px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Rounding only on left of module */
-#temperature {
-  border-radius: 8px 0 0 8px;
+#custom-wf-recorder {
+    padding: 0 20px;
+    color: #e5809e;
+    background-color: #1E1E2E;
 }
 
-/* Rounding only on right of module(s) */
-#custom-pacman,
-#custom-kernel {
-  border-radius: 0 8px 8px 0;
+#cpu {
+    background-color: #282828;
+    /*color: #FABD2D;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#memory {
+    background-color: #282828;
+    /*color: #83A598;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#disk {
+    background-color: #282828;
+    /*color: #8EC07C;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#custom-hyprpicker {
+    background-color: #282828;
+    /*color: #8EC07C;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 11px 0px 9px;
+    font-weight: bold;
 }

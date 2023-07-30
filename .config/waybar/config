@@ -1,13 +1,13 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 12, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "network",  "battery", "tray"],
+    "modules-right": ["pulseaudio", "network",  "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -28,12 +28,7 @@
         "sort-by-coordinates": true, //It did not have an effect
         "sort-by-number": true,
         "on-click": "activate",
-        "format": "{name}",
-        "format-icons": {
-            "default": "",
-            "active": "",
-            "urgent": ""
-        }
+        "format": "{name}"
     },
     "tray": {
         // "icon-size": 21,
@@ -68,7 +63,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " {essid} ({signalStrength}%) ",
-        "format-ethernet": " {ipaddr}/{cidr} ",
+        "format-ethernet": "<span foreground='#7aa2f7' font='14.5' rise='-2000'></span> {ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} using {ipaddr} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -89,7 +84,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["  ", "  ", "  "]
         },
         "on-click": "pavucontrol"
     }

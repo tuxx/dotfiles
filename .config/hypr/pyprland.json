@@ -8,27 +8,27 @@
     "term": {
       "command": "kitty --class kitty-dropterm",
       "animation": "fromTop",
-      "unfocus": "hide"
+      "lazy": "true"
     },
     "tmuxterm": {
       "command": "kitty --class kitty-tmuxdropterm tmux",
       "animation": "",
-      "unfocus": "hide"
+      "lazy": "true"
     },
     "irc": {
-      "command": "kitty --hold --class kitty-irc ssh irc",
+      "command": "kitty --class critty-irc ssh irc",
       "animation": "",
-      "unfocus": "hide"
+      "lazy": "true"
     },
     "spotify": {
       "command": "spotify-launcher",
       "animation": "fromLeft",
-      "unfocus": "hide"
+      "lazy": "true"
     },
     "volume": {
       "command": "pavucontrol",
-      "unfocus": "hide",
-      "animation": "fromRight"
+      "animation": "fromRight",
+      "lazy": "true"
     }
   },
     "unknown": "wlrlui"
